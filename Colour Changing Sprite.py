@@ -28,6 +28,10 @@ clock = pygame.time.Clock()
 
 done = False
 
+font = pygame.font.SysFont("futuristic", 36)
+
+text = font.render("My First Game Screen", True, (0, 0, 0))
+
 while not done:
     
     for event in pygame.event.get():
@@ -53,6 +57,8 @@ while not done:
     
     screen.fill((52, 73, 94 ))
     pygame.draw.rect(screen, current_color, (x, y, sprite_width, sprite_height,))
+    
+    screen.blit(text, (85, 150))
     
     pygame.display.flip()
     clock.tick(90)
